@@ -1,3 +1,10 @@
+Metadata-Version: 2.1
+Name: ntlkClassifier
+Version: 0.0.0
+Summary: A Python package for NLTK APP
+Author: RS4327
+Author-email: raju.meenige@gmail.com
+
 # predicting the Drug Efficacy
 1.WorkFlows
 2.Update Config.yaml

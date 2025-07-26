@@ -5,6 +5,23 @@ import logging
 logging.basicConfig(level=logging.INFO,format='[%(asctime)s]:%(message)s')
 
 
+''' 
+To automatically set up the basic folder and file structure of your project (nltkClassifier) 
+so that you don’t have to manually create directories and boilerplate files every time.
+
+This is especially helpful for:
+
+Maintaining consistency across multiple projects
+
+Ensuring all required files are present
+
+Speeding up the setup for new team members or repositories
+
+Setting up for tools like DVC, GitHub Actions, Jupyter, and templates
+
+'''
+
+
 ProjectName='nltkClassifier'
 
 list_of_files=[
