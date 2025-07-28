@@ -5,6 +5,8 @@ src/nltkClassifier/Components/__init__.py
 src/nltkClassifier/Config/__init__.py
 src/nltkClassifier/Constants/__init__.py
 src/nltkClassifier/Entity/__init__.py
+src/nltkClassifier/Pipeline/__init__.py
+src/nltkClassifier/Utils/__init__.py
 src/ntlkClassifier.egg-info/PKG-INFO
 src/ntlkClassifier.egg-info/SOURCES.txt
 src/ntlkClassifier.egg-info/dependency_links.txt
