@@ -1,0 +1,17 @@
+# artifacts_root: artifacts
+
+
+# data_ingestion:
+#   root_dir: artifacts/data_ingestion
+#   source_url : https://github.com/RS4327/RAWDATA/blob/62ab1492ce55280cfd1dce1734d3286f193b5dd5/drugsComTrain_raw.zip
+#   local_data_file : artifacts/data_ingestion/data.zip 
+#   unzip_dir : artifacts/data_ingestion
+
+artifacts_root: artifacts
+
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_url: https://github.com/RS4327/RAWDATA/blob/main/drugsComTrain_raw.zip
+  local_data_file: artifacts/data_ingestion/data.csv
+  unzip_dir: artifacts/data_ingestion
