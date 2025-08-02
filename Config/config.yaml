@@ -13,5 +13,12 @@ artifacts_root: artifacts
 data_ingestion:
   root_dir: artifacts/data_ingestion
   source_url: https://github.com/RS4327/RAWDATA/blob/main/drugsComTrain_raw.zip
-  local_data_file: artifacts/data_ingestion/data.csv
+  local_data_file: artifacts/data_ingestion/drugsComTrain_raw.zip
   unzip_dir: artifacts/data_ingestion
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  STATUS_FILE : artifacts/data_validation/status.txt
+  ALL_REQUIRED_FILES : ['drugsComTest_raw.csv','drugsComTrain_raw.csv','drugsComTrain_raw.zip']
+
