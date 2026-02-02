@@ -1,0 +1,8 @@
+artifacts_root : artifacts
+
+Data_Ingestion:
+  root_dir : artifacts\Data_Ingestion
+  source_path : 'C:\Users\RSR\PYTHON\DrugEfficacy\drugsComTrain_raw.csv'
+Data_Preprocessing:
+  root_dir : artifacts/Data_Preprocessing
+  
