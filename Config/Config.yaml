@@ -5,4 +5,11 @@ Data_Ingestion:
   source_path : 'C:\Users\RSR\PYTHON\DrugEfficacy\drugsComTrain_raw.csv'
 Data_Preprocessing:
   root_dir : artifacts/Data_Preprocessing
-  
+  validation_path : artifacts/Data_Ingestion/data_ingestion.csv
+  cleaned_data_path : artifacts/cleaned_data.csv
+  allowed_missing_percentage : 5
+  allowed_outlier_std : 3
+  encoding_strategy : "leble"
+  scaling_strategy : "std"
+  imputation_strategy : "mean"
+  handling_missing : True
