@@ -13,3 +13,11 @@ Data_Preprocessing:
   scaling_strategy : "std"
   imputation_strategy : "mean"
   handling_missing : True
+
+Data_FeatureEngineering:
+  root_dir : artifacts/Data_FeatureEngineering
+  input_data_path : artifacts/cleaned_data.csv
+  output_data_path : artifacts/Data_FeatureEngineering.csv
+  features_selection : True
+  correlation_threshold : 0.85
+  

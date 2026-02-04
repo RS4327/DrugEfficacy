@@ -26,12 +26,12 @@ class ConfigurationManagerConfig:
         return Data_Ingestion_Config
     
     def getdatapreprocessing(self)->DataPreProcessingConfig:
-        config=self.config.data_preprocessing
-        
+        config=self.config.Data_Preprocessing
+
 
         data_preprocessing_config=DataPreProcessingConfig(
             root_dir=config.root_dir,
-            validation_path=config.valiation_path,
+            validation_path=config.validation_path,
             cleaned_data_path=config.cleaned_data_path,
             allowed_missing_percentage=config.allowed_missing_percentage,
             allowed_outlier_std=config.allowed_outlier_std,
@@ -42,6 +42,18 @@ class ConfigurationManagerConfig:
         )
         return data_preprocessing_config
 
-    
+    def getdatafeatureengineering(self)->DataFeatureEngineeringConfig:
+        config=self.config.Data_FeatureEngineering
+
+        Data_FeatureEngineering_Config=DataFeatureEngineeringConfig(
+            root_dir=config.root_dir,
+            input_data_path=config.input_data_path,
+            output_data_path=config.output_data_path,
+            features_selection=config.features_selection,
+            correlation_threshold=config.correlation_threshold
+        )
+        return Data_FeatureEngineering_Config
+
+
 
 

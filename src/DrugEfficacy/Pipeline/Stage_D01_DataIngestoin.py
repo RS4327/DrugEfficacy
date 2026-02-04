@@ -15,7 +15,7 @@ class DataIngestionPipeline:
             data_ingestion_config=config.GetDataIngestionConfig()
             data_ing=DataIngestion(config=data_ingestion_config)
             data_load=data_ing.DataLoading()
-            
+            return data_load 
         except Exception as e:
             logger.info(f"Error at DataIngestionPipline")
             raise e

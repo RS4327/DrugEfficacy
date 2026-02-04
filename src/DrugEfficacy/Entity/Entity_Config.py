@@ -17,4 +17,12 @@ class DataPreProcessingConfig:
     imputation_strategy : str
     handling_missing : bool
 
+@dataclass
+class DataFeatureEngineeringConfig:
+  root_dir : str
+  input_data_path : str
+  output_data_path : str
+  features_selection : bool
+  correlation_threshold : float
+
 

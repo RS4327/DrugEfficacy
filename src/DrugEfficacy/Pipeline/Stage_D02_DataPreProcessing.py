@@ -8,18 +8,19 @@ Stage_Name='Data PreProcessing'
 
 class DataPreProcessingPipeline:
     def __init__(self):
-        pass 
+        pass
 
     def main(self,df):
         try:
+           
             config=ConfigurationManagerConfig()
-            datapreprocessingconfig=config.GetDataIngestionConfig()
+            datapreprocessingconfig=config.getdatapreprocessing()
             data_pre=DataPreProcessing(config=datapreprocessingconfig)
-            df=data_pre.process(df)
-
+            processed_df=data_pre.process(df)
+            logger.info(f" Data PreProcessing completed successfully. Shape: {processed_df.shape}")
+            return processed_df
         except Exception as e:
             logger.info(f" Error at DataPreProcessing Pipe Line")
-
 
 
 if __name__ =='__main__':
@@ -27,6 +28,7 @@ if __name__ =='__main__':
         logger.info(f"<<<<<<<<<<<<<<<<< Stage :{Stage_Name} started >>>>>>>>>>>>>>>>>>>>>>")
         obj=DataPreProcessingPipeline()
         obj.main()
+        
         logger.info(f"<<<<<<<<<<<<<<<<< Stage :{Stage_Name} Completed Successfully  >>>>>>>>>>>>>>>>>>>>>>")
     except  Exception as e:
         logger.info(e)
