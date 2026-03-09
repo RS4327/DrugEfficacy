@@ -20,4 +20,48 @@ Data_FeatureEngineering:
   output_data_path : artifacts/Data_FeatureEngineering.csv
   features_selection : True
   correlation_threshold : 0.85
-  
+
+Data_ModelTraining:
+  root_dir : artifacts/Data_ModelTraining
+  model_dir : artifacts/Data_ModelTraining/Model 
+  reports_dir : artifacts/Data_ModelTraining/Reprots 
+  logs_dir : artifacts/Data_ModelTraining/Logs
+  test_size :  0.2
+  random_state : 42
+  cross_validation_folds : 5
+  Models : 
+    RamdomForest: 
+      n_estimators : 200
+      max_features : 'sqrt'
+      max_depth : 10
+      min_samples_splist : 4
+      random_state : 42
+    XGBoost:
+      n_estimators : 300
+      learning_rate : 0.05
+      max_depth : 6
+      subsmaple : 0.8
+      colsample_bytree : 0.8
+      random_state : 42
+    DNN : 
+      layers : [128,64,32]
+      activation : 'relu'
+      batch_size : 32
+      dropout_rate : 0.3
+      epochs : 50
+      optimizer : adam 
+      loss : binary_crossentropy
+      metrics : [accurcy,AUC]
+
+  Evaluation_Metrics:
+    - accurcy
+    - precision
+    - recall
+    - f1_score 
+    - roc_auc
+  best_model_path : artifacts/Model.pkl
+
+
+
+
+

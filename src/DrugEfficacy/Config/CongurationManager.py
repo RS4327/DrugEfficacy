@@ -54,6 +54,19 @@ class ConfigurationManagerConfig:
         )
         return Data_FeatureEngineering_Config
 
+    def getdatamodeltraining(self)->DataModelTrainingCOnfig:
+        config=self.config.Data_ModelTraining
+        Data_ModelTraining_Config=DataModelTrainingCOnfig(
+            root_dir=config.root_dir,
+            model_dir=config.model_dir,
+            reports_dir=config.reports_dir,
+            logs_dir = config.logs_dir,
+            test_size =config.test_size,
+            random_state =config.random_state
 
+
+        )
+        return Data_ModelTraining_Config
+        
 
 
